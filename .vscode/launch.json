@@ -1,0 +1,10 @@
+{
+  "configurations": [
+    {
+      "name": "Text Widget(Basic)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/text_widget/text_widget.dart"
+    }
+  ]
+}
