@@ -5,6 +5,20 @@
       "type": "dart",
       "request": "launch",
       "program": "lib/text_widget/text_widget.dart"
+    },
+    {
+      "name": "Text Widget(Intermediate)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/text_widget/text_widget_intermediate.dart",
+      "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
+    },
+    {
+      "name": "Text Widget(Advance)",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/text_widget/text_widget_advance.dart",
+      "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
     }
   ]
 }
