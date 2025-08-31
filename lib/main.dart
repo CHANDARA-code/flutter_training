@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
+void main() async {
   runApp(const MyApp());
 }
 
@@ -30,11 +31,38 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    // initGetValue();
+    super.initState();
+  }
+
   int _counter = 0;
 
   void _incrementCounter() {
+    print("Function: _incrementCounter()");
+    print("Before Operation: counter :  $_counter");
     setState(() {
       _counter++;
+    });
+    print("After Operation counter: $_counter");
+  }
+
+  Future<int> saveCounter() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.setInt("counter_key", _counter);
+
+    return _counter;
+  }
+
+  Future<void> initGetValue() async {
+    final SharedPreferences prefs = await SharedPreferences.getInstance();
+    final saveCounterValue = prefs.getInt(
+      "counter_key",
+    );
+
+    setState(() {
+      _counter = saveCounterValue ?? 0;
     });
   }
 
@@ -67,7 +95,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () async {
+          _incrementCounter();
+          await saveCounter();
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
