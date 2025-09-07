@@ -33,6 +33,13 @@
       "request": "launch",
       "program": "lib/container/contianer_basic_widget.dart",
       "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
+    },
+    {
+      "name": "Row Usage",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/row/row_usage.dart",
+      "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
     }
   ]
 }

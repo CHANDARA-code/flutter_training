@@ -4,12 +4,14 @@ class AppContainer extends StatelessWidget {
   final double width;
   final double height;
   final Color color;
+  final Border? border;
 
   const AppContainer({
     super.key,
     this.width = 100,
     this.height = 100,
     this.color = Colors.blue,
+    this.border,
   });
 
   @override
@@ -19,10 +21,7 @@ class AppContainer extends StatelessWidget {
       height: height,
       decoration: BoxDecoration(
         color: color,
-        border: Border.all(
-          color: Colors.red,
-          style: BorderStyle.solid,
-        ),
+        border: border,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(12),
           bottomLeft: Radius.circular(

@@ -37,7 +37,21 @@ class ContianerBasicWidget extends StatelessWidget {
             SizedBox(
               height: 12,
             ),
-            _buildContainer(),
+            Container(
+              width: 100,
+              height: 100,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                border: null,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(12),
+                  bottomLeft: Radius.circular(
+                    12,
+                  ),
+                ),
+              ),
+              child: Text("Container"),
+            ),
             SizedBox(
               height: 12,
             ),
