@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:training/image/app_text_widget.dart';
+import 'package:training/week4/image/app_text_widget.dart';
 
 void main(List<String> args) {
   runApp(MaterialApp(
