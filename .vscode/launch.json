@@ -110,6 +110,20 @@
       "request": "launch",
       "program": "lib/week5/listile_widget/before_listile_widget.dart",
       "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
+    },
+    {
+      "name": "Exercise+Week5",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/week5/exercises/exercises.dart",
+      "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
+    },
+    {
+      "name": "Exercise(Edit)+Week5",
+      "type": "dart",
+      "request": "launch",
+      "program": "lib/week5/exercises/exercise_edit/main.dart",
+      "deviceId": "7778811E-559C-45CA-AEA5-B90043808A09"
     }
   ]
 }
